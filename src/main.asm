@@ -14,6 +14,10 @@
 
     .org $8000
 
+    ; スタート画面にセット
+    lda #01
+    sta <$00
+
 MainLoop:
     lda $2002   ; NEGでVBlank割り込み
     bpl MainLoop   ; NEGが立つまで待機
