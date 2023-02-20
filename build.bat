@@ -1,0 +1,1 @@
+C:\ProgramData\nesasm\nesasm.lnk src\main.asm
