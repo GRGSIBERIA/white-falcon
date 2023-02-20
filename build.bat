@@ -1,1 +1,1 @@
-C:\ProgramData\nesasm\nesasm.lnk src\main.asm
+C:\ProgramData\nesasm\nesasm_x64.exe src\main.asm
