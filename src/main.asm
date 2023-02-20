@@ -28,14 +28,14 @@ MainLoop:
     dec
     bmi _GG      ; 3
 
-_Start:
-    jmp StartScreen
-    .include "start.asm"
-_Game:
-    jmp GameScreen
-    .include "game.asm"
-_GG:
-    jmp GGScreen
-    .include "gg.asm"
+    jmp MainLoop
 
+_Start:
+    .include "start.asm"
+    jmp MainLoop
+_Game:
+    .include "game.asm"
+    jmp MainLoop
+_GG:
+    .include "gg.asm"
     jmp MainLoop
