@@ -19,23 +19,23 @@ MainLoop:
     bpl MainLoop   ; NEGが立つまで待機
 
     ldx <$00
-    dec
-    bmi _Main    ; 1
+    dex
+    bne _Start    ; 1
 
-    dec
-    bmi _Game    ; 2
+    dex
+    bne _Game    ; 2
 
-    dec
-    bmi _GG      ; 3
+    dex
+    bne _GG      ; 3
 
     jmp MainLoop
 
 _Start:
-    .include "start.asm"
+    .include "src\start.asm"
     jmp MainLoop
 _Game:
-    .include "game.asm"
+    .include "src\game.asm"
     jmp MainLoop
 _GG:
-    .include "gg.asm"
+    .include "src\gg.asm"
     jmp MainLoop
